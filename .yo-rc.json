@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "ark-lunch",
+    "style": "css",
+    "cssmodules": true,
+    "postcss": false,
+    "generatedWithVersion": 4
+  }
+}
