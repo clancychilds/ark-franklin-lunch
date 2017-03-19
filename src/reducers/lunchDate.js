@@ -5,7 +5,7 @@
  */
 import {PICK_DAY, PICK_WEEK} from '../actions/const';
 
-const initialState = {};
+const initialState = {day: {label:''}, week: {label: ''}};
 
 function reducer(state = initialState, action) {
   /* Keep the reducer clean - do not mutate the original state. */
@@ -14,11 +14,11 @@ function reducer(state = initialState, action) {
   switch (action.type) {
 
     case PICK_DAY: {
-      nextState.day = action.day.value;
+      nextState.day = action.day;
       return nextState;
     }
     case PICK_WEEK: {
-      nextState.week = action.week.value;
+      nextState.week = action.week;
       return nextState;
     }
     default: {

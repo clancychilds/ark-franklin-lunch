@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import Select from 'react-select';
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-select/dist/react-select.css';
+import MenuDisplay from '../components/MenuDisplay';
 import {pickDay, pickWeek} from '../actions/';
 
 const weekOptions = [
@@ -27,8 +28,9 @@ class MenuForm extends Component {
   render() {
     const { actions, day, week } = this.props;
     return <div>
-    <Select clearable={ false } options={weekOptions} value={week} onChange={actions.pickWeek} placeholder="Select the week" />
-    <Select clearable={ false } options={dayOptions} value={day} onChange={actions.pickDay} placeholder="Select the day" />
+    <Select clearable={ false } options={weekOptions} value={week.value} onChange={actions.pickWeek} placeholder="Select the week" />
+    <Select clearable={ false } options={dayOptions} value={day.value} onChange={actions.pickDay} placeholder="Select the day" />
+    <MenuDisplay week={week} day={day} />
     </div>;
   }
 }
