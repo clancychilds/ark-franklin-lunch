@@ -10,13 +10,16 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import {} from '../actions/';
+import {
+  pickWeek,
+  pickDay
+} from '../actions/';
 import Main from '../components/App';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    const { actions } = this.props;
-    return <Main actions={actions} />;
+    const {actions, lunchDate} = this.props;
+    return <Main actions={actions} lunchDate={lunchDate}/>;
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -25,16 +28,24 @@ class App extends Component {
  *       adjust it here.
  */
 App.propTypes = {
-  actions: PropTypes.shape({})
+  actions: PropTypes.shape({
+    pickWeek: PropTypes.func.isRequired,
+    pickDay: PropTypes.func.isRequired
+  }),
+  lunchDate: PropTypes.shape({})
 };
-function mapStateToProps(state) { // eslint-disable-line no-unused-vars
+function mapStateToProps(state) {
+  // eslint-disable-line no-unused-vars
   /* Populated by react-webpack-redux:reducer */
-  const props = {};
+  const props = { lunchDate: state.lunchDate };
   return props;
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
-  const actions = {};
+  const actions = {
+    pickWeek,
+    pickDay
+  };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;
 }

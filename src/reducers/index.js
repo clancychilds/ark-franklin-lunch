@@ -9,7 +9,7 @@
  */
 /* Populated by react-webpack-redux:reducer */
 import { combineReducers } from 'redux';
-
-const reducers = {};
+import lunchDate from '../reducers/lunchDate.js';
+const reducers = { lunchDate };
 const combined = combineReducers(reducers);
 module.exports = combined;
