@@ -25,10 +25,10 @@ const dayOptions = [
 
 class MenuForm extends Component {
   render() {
-    const { actions } = this.props;
+    const { actions, day, week } = this.props;
     return <div>
-    <Select options={weekOptions} onChange={actions.pickWeek} placeholder="Select the week" />
-    <Select options={dayOptions} onChange={actions.pickDay} placeholder="Select the day" />
+    <Select clearable={ false } options={weekOptions} value={week} onChange={actions.pickWeek} placeholder="Select the week" />
+    <Select clearable={ false } options={dayOptions} value={day} onChange={actions.pickDay} placeholder="Select the day" />
     </div>;
   }
 }
@@ -38,7 +38,8 @@ MenuForm.propTypes = {
 };
 
 function mapStateToProps(state) {
-  const props = {};
+  const props = {week: state.lunchDate.week,
+                 day: state.lunchDate.day};
   return props;
 }
 
