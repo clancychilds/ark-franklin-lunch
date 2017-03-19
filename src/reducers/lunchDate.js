@@ -5,7 +5,7 @@
  */
 import {PICK_DAY, PICK_WEEK} from '../actions/const';
 
-const initialState = {day: {label:''}, week: {label: ''}};
+const initialState = {};
 
 function reducer(state = initialState, action) {
   /* Keep the reducer clean - do not mutate the original state. */

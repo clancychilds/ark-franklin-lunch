@@ -28,8 +28,8 @@ class MenuForm extends Component {
   render() {
     const { actions, day, week } = this.props;
     return <div>
-    <Select clearable={ false } options={weekOptions} value={week.value} onChange={actions.pickWeek} placeholder="Select the week" />
-    <Select clearable={ false } options={dayOptions} value={day.value} onChange={actions.pickDay} placeholder="Select the day" />
+    <Select clearable={ false } options={weekOptions} value={week} onChange={actions.pickWeek} placeholder="Select the week" />
+    <Select clearable={ false } options={dayOptions} value={day} onChange={actions.pickDay} placeholder="Select the day" />
     <MenuDisplay week={week} day={day} />
     </div>;
   }

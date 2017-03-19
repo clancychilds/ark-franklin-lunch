@@ -6,6 +6,8 @@ class MenuDisplay extends React.Component {
 
   render() {
     const { day, week } = this.props;
+    if (day === undefined || week === undefined) return;
+    
     return (
       <div className="menudisplay-component" styleName="menudisplay-component">
       {week.label} - {day.label}
