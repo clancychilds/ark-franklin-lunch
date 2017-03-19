@@ -11,9 +11,9 @@ import MenuDisplay from '../components/MenuDisplay';
 import {pickDay, pickWeek} from '../actions/';
 
 const weekOptions = [
-    { value: '1', label: 'Week 1' },
-    { value: '2', label: 'Week 2' },
-    { value: '3', label: 'Week 3'}
+    { value: 'week1', label: 'Week 1' },
+    { value: 'week2', label: 'Week 2' },
+    { value: 'week3', label: 'Week 3'}
 ];
 
 const dayOptions = [
