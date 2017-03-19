@@ -1,8 +1,7 @@
 .arkfranklinheader-component {
-  border: 1px dashed #f00;
   color: gray;
   font-weight: bold;
-  max-width: 500px;
+  margin: 10px auto;
 }
 
 .arkfranklinheader-component img {
