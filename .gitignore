@@ -29,8 +29,8 @@ node_modules
 # Bower
 bower_components/
 
-# Dist folder
-dist/
+# Dist folder (using for ghpages, thus commented out)
+#dist/
 
 # IDE/Editor data
 .idea/
