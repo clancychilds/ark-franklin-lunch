@@ -10,15 +10,10 @@ class MenuDisplay extends React.Component {
     if (day === undefined || week === undefined) return;
     var dayValue = day.value;
     var weekValue = week.value
-    console.log(menuData);
-    console.log(dayValue);
-    console.log(weekValue);
     const menu = menuData[weekValue][dayValue];
-    console.log(menu);
     return (
       <div className="menudisplay-component" styleName="menudisplay-component">
-      {week.label} - {day.label}
-      { Object.keys(menu).map(menuItem => (<div><h1>{ menuItem }</h1><div>{ menu[menuItem] }</div></div>)) }
+      { Object.keys(menu).map(menuItem => (<div><h1>{ menuItem }</h1><div styleName="item-detail">{ menu[menuItem] }</div></div>)) }
       </div>
     );
   }

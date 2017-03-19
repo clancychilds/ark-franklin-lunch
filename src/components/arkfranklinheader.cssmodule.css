@@ -1,7 +1,9 @@
 .arkfranklinheader-component {
-  color: gray;
+  color: #44003e;
   font-weight: bold;
   margin: 10px auto;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .arkfranklinheader-component img {
